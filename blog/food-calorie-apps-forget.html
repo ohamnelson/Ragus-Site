@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The food that calorie apps forget — Ragus</title>
+<meta name="description" content="Search most calorie trackers for waakye or a bottle of malt and you get nothing usable. That gap is baked into how they were built.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <svg width="28" height="28" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <path d="M17 68 q-9 3 -10 13" stroke="#C4552F" stroke-width="7" stroke-linecap="round"/>
+        <path d="M83 68 q9 3 10 13" stroke="#C4552F" stroke-width="7" stroke-linecap="round"/>
+        <rect x="31" y="80" width="15" height="10" rx="5" fill="#9E4325"/>
+        <rect x="54" y="80" width="15" height="10" rx="5" fill="#9E4325"/>
+        <rect x="18" y="26" width="64" height="58" rx="17" fill="#C4552F"/>
+        <path d="M35 26 H65 A17 17 0 0 1 82 43 H18 A17 17 0 0 1 35 26 Z" fill="#D4744F"/>
+        <circle cx="40" cy="56" r="9" fill="#FBF8F4"/><circle cx="62" cy="56" r="9" fill="#FBF8F4"/>
+        <circle cx="42" cy="57" r="4.2" fill="#2B2724"/><circle cx="64" cy="57" r="4.2" fill="#2B2724"/>
+        <path d="M43 71 q8 7 16 0" stroke="#2B2724" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+      </svg>
+      Ragus
+    </a>
+    <div class="nav-links">
+      <a href="../faq.html">FAQ</a>
+      <a href="index.html">Blog</a>
+    </div>
+  </nav>
+
+  <article class="post">
+    <h1>The food that calorie apps forget</h1>
+    <p class="date">10 September 2026</p>
+
+    <p>Open a mainstream calorie tracker and search for <em>waakye</em>. You will
+      probably get nothing. Search for <em>goat meat</em> and you may get a raw cut
+      measured per 100&nbsp;g, which is not what you ate. Search for a bottle of malt
+      and you'll get a scattering of user-submitted entries with wildly different
+      numbers and no way to tell which one is right.</p>
+
+    <p>This is not an oversight anyone forgot to fix. It follows directly from
+      how those apps are built.</p>
+
+    <h2>A database is a list of decisions</h2>
+
+    <p>A conventional tracker is a search box in front of a food database. That
+      database was assembled somewhere, by someone, from the products on shelves near
+      them. Everything in it is a decision that a particular food was worth including.</p>
+
+    <p>Those decisions were mostly made in North America and Western Europe. So
+      the database is excellent on breakfast cereal and supermarket ready meals, thin
+      on anything cooked in a home kitchen, and close to useless for a dish that is
+      ordinary in Accra or Lagos and unheard of in the dataset's home town.</p>
+
+    <p>The gap gets papered over with user submissions, which is how you end up
+      with six entries for the same drink disagreeing by a factor of three.</p>
+
+    <h2>What that actually costs</h2>
+
+    <p>Not accuracy &mdash; abandonment.</p>
+
+    <p>If two meals a day can't be logged without a fight, the day's total is
+      wrong, the app knows it's wrong, and you stop opening it. Nobody quits a calorie
+      tracker because it was off by forty calories. They quit because logging dinner
+      took four minutes and ended in a guess.</p>
+
+    <blockquote>The failure mode of a food database isn't a wrong number. It's a
+      person who gives up.</blockquote>
+
+    <h2>Describing instead of searching</h2>
+
+    <p>Ragus doesn't have a food database to be missing from. You describe what
+      you ate, and it works out what that means &mdash; the same way a dietitian does
+      when you tell them about your day. “Goat meat, some rice and a bottle of malt” is
+      a complete input. There is no list for it to be absent from.</p>
+
+    <p>The first time someone logs an unfamiliar item, that costs a real lookup.
+      The answer is then remembered and shared, so the next person who mentions the same
+      thing gets it instantly and for nothing. Over time this builds a record of what
+      the people using the app actually eat &mdash; which, for regional food, is worth
+      considerably more than any dataset you could buy.</p>
+
+    <h2>What we're watching</h2>
+
+    <p>The interesting failure is near-duplicates. “Goat meat”, “goat meat chunks”
+      and “goat meat chunks with skin and bone” are three ways of saying roughly one
+      thing, and treating them as three separate foods is both wasteful and slightly
+      wrong. Teaching the system that they're the same food described at different
+      levels of detail is an ongoing piece of work.</p>
+
+    <p>It's a better problem to have than an empty search result.</p>
+
+    <a class="back" href="index.html">&larr; All posts</a>
+  </article>
+
+  <footer>
+    <div class="footer-links">
+      <a href="../index.html">Home</a>
+      <a href="../faq.html">FAQ</a>
+      <a href="index.html">Blog</a>
+      <a href="mailto:dev@ragus.io">dev@ragus.io</a>
+    </div>
+    <p>&copy; 2026 Ragus.</p>
+  </footer>
+</div>
+
+</body>
+</html>
