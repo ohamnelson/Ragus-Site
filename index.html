@@ -53,46 +53,34 @@
 </nav>
 
 <header class="hero container">
-  <h1>Don't search.<br><em>Just say it.</em></h1>
-  <p class="lede">The calorie tracker you talk to. Describe your meal in your own words
-    and Ragus turns it into calories, macros and burn &mdash; portions estimated,
-    exercise subtracted, nothing looked up in a list.</p>
-  <div class="cta">
-    <a class="appstore" href="#" aria-disabled="true">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M16.4 12.8c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.6.7 2.8.7c1.1 0 1.9-1 2.6-2.1.8-1.2 1.2-2.4 1.2-2.5-.1 0-2.2-.9-2.2-3.2zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.6-1.1 1.6-.9 2.6 1 .1 2-.5 2.6-1.2z"/>
-      </svg>
-      <span>
-        <span class="sub">Coming soon to the</span>
-        <span class="main">App Store</span>
-      </span>
-    </a>
-    <p class="cta-note">iPhone &middot; iOS 15.1 and later &middot; Free</p>
+  <div class="hero-copy">
+    <span class="proof"><span class="dot"></span>Voice-first calorie tracking &middot; iPhone</span>
+    <h1>Meet Ragus<br>Track your calories<br>with <em>just your voice</em></h1>
+    <p class="lede">Say what you ate and what you did, in your own words. Ragus turns it
+      into calories, macros and burn &mdash; portions estimated, exercise subtracted.</p>
+    <div class="cta">
+      <a class="appstore" href="#" aria-disabled="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M16.4 12.8c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.6.7 2.8.7c1.1 0 1.9-1 2.6-2.1.8-1.2 1.2-2.4 1.2-2.5-.1 0-2.2-.9-2.2-3.2zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.6-1.1 1.6-.9 2.6 1 .1 2-.5 2.6-1.2z"/>
+        </svg>
+        <span>
+          <span class="sub">Coming soon to the</span>
+          <span class="main">App Store</span>
+        </span>
+      </a>
+      <p class="cta-note">iOS 15.1 and later &middot; Free</p>
+    </div>
   </div>
 
-  <!-- The whole product in one card: what you say, what you get. -->
-  <div class="demo" aria-label="Example: what you say and what Ragus records">
-    <div class="demo-in">
-      <span class="who"><span class="dot"></span>You say</span>
-      <p>&ldquo;Two boiled eggs, toast with butter and a large coffee.
-        Then a 5k run this evening.&rdquo;</p>
-    </div>
-    <div class="demo-arrow" aria-hidden="true">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    </div>
-    <div class="demo-out">
-      <span class="who">Ragus records</span>
-      <ul>
-        <li><span>Boiled egg &times;2</span><b>140</b></li>
-        <li><span>Toast with butter</span><b>190</b></li>
-        <li><span>Large coffee</span><b>5</b></li>
-        <li class="burn"><span>5k run</span><b>&minus;310</b></li>
-      </ul>
-      <div class="net"><span>Net for the day</span><b>+25 kcal</b></div>
-    </div>
+  <!-- Input on the left phone, output on the right: the product in one look. -->
+  <div class="hero-phones" aria-label="Ragus listening, and the itemised day it produces">
+    <figure class="phone p1"><img src="img/listening.png" alt="The Log screen listening as you describe a meal" fetchpriority="high"></figure>
+    <svg class="arrow" viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M6 14 C 30 6, 44 30, 36 48 C 30 62, 12 58, 18 44 C 26 28, 70 40, 108 60"/>
+      <path d="M96 64 L 109 60 L 102 49"/>
+    </svg>
+    <figure class="phone p2"><img src="img/detail.png" alt="The day itemised: each meal and workout with its calories and the assumption behind it" fetchpriority="high"></figure>
   </div>
-  <p class="demo-note">One sentence. Four entries, portions estimated, the run given back.
-    You never opened a search box.</p>
 </header>
 
 <!-- Honest social proof: the food, not the logos. -->

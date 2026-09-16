@@ -31,14 +31,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* The landing page gets a faint warm wash behind the hero, the way the
-   reference site fades from tinted to white. */
-body.landing {
-  background:
-    radial-gradient(900px 520px at 50% -80px, #F1E4DA 0%, rgba(241, 228, 218, 0) 70%),
-    var(--bg);
-}
-
 a { color: var(--accent); }
 
 img { max-width: 100%; display: block; }
@@ -179,9 +171,79 @@ p:last-child { margin-bottom: 0; }
 
 /* ----------------------------------------------------------------- hero */
 
-.hero { padding: 88px 24px 40px; text-align: center; }
+/* Copy on the left, two tilted phones on the right: what you say, what you
+   get. Stacks and centres below 900px. */
+.hero {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+  padding: 56px 24px 24px;
+  text-align: center;
+}
 
-.hero .lede { margin-left: auto; margin-right: auto; }
+@media (min-width: 900px) {
+  .hero { grid-template-columns: 1.05fr 1fr; gap: 48px; padding-top: 48px; text-align: left; }
+  .hero .cta { align-items: flex-start; }
+  .hero .lede { margin-left: 0; }
+}
+
+.hero .lede { margin: 0 auto 30px; max-width: 30em; }
+
+.hero h1 { font-size: clamp(40px, 5.6vw, 64px); line-height: 1.06; }
+
+/* The line above the headline, where the reference has a rating. Ragus has
+   no ratings yet, so it says what the product is instead of how loved it is. */
+.proof {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 2px solid var(--rule);
+  background: var(--card);
+  border-radius: 999px;
+  padding: 7px 14px 7px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+.hero-phones {
+  position: relative;
+  height: 560px;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-phones .phone {
+  position: absolute;
+  width: 228px;
+  border-width: 8px;
+  border-radius: 42px;
+}
+
+.hero-phones .phone img { border-radius: 34px; }
+
+.hero-phones .p1 { left: 0; top: 64px; transform: rotate(-7deg); z-index: 1; }
+.hero-phones .p2 { right: 0; top: 0; transform: rotate(6deg); z-index: 1; }
+
+.hero-phones .arrow {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  width: 84px;
+  color: var(--ink);
+  z-index: 3;
+  transform: translateX(-50%) rotate(-12deg);
+}
+
+@media (max-width: 560px) {
+  .hero-phones { height: 440px; }
+  .hero-phones .phone { width: 176px; border-width: 7px; border-radius: 34px; }
+  .hero-phones .phone img { border-radius: 27px; }
+  .hero-phones .p1 { top: 50px; }
+  .hero-phones .arrow { width: 60px; top: 40%; }
+}
 
 /* ------------------------------------------------------------- download */
 
@@ -212,36 +274,6 @@ p:last-child { margin-bottom: 0; }
 
 .cta-note { font-size: 14px; color: var(--faint); margin: 0; }
 
-/* -------------------------------------------------------------- the demo */
-
-/* What you say on the left, what you get on the right. The card is the
-   product's whole argument in one glance, so it sits under the hero. */
-.demo {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: stretch;
-  gap: 18px;
-  max-width: 900px;
-  margin: 56px auto 0;
-  text-align: left;
-}
-
-.demo-in, .demo-out {
-  background: var(--card);
-  border: 2px solid var(--rule);
-  border-radius: 20px;
-  padding: 22px 24px;
-}
-
-.demo-in p {
-  font-size: clamp(19px, 2.2vw, 23px);
-  line-height: 1.45;
-  letter-spacing: -0.2px;
-  margin: 0;
-}
-
-.demo-arrow { display: flex; align-items: center; color: var(--accent); }
-
 .who {
   display: flex;
   align-items: center;
@@ -254,50 +286,18 @@ p:last-child { margin-bottom: 0; }
   margin-bottom: 12px;
 }
 
-/* A recording light, so the left card reads as speech. */
-.who .dot {
+/* A recording light. */
+.dot {
   width: 9px; height: 9px; border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 0 0 rgba(196, 85, 47, 0.5);
   animation: pulse 1.8s ease-out infinite;
+  flex: none;
 }
 
 @keyframes pulse {
   0%   { box-shadow: 0 0 0 0 rgba(196, 85, 47, 0.45); }
   100% { box-shadow: 0 0 0 10px rgba(196, 85, 47, 0); }
-}
-
-.demo-out ul { list-style: none; margin: 0; padding: 0; }
-
-.demo-out li {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 9px 0;
-  border-bottom: 1px solid var(--rule);
-  font-size: 16px;
-}
-
-.demo-out li b { font-weight: 600; font-variant-numeric: tabular-nums; }
-.demo-out li.burn b { color: var(--accent); }
-
-.demo-out .net {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 12px;
-  font-size: 13px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.demo-out .net b { color: var(--ink); font-size: 16px; letter-spacing: 0; text-transform: none; }
-
-.demo-note { text-align: center; color: var(--muted); font-size: 16px; margin: 20px auto 0; max-width: 34em; }
-
-@media (max-width: 720px) {
-  .demo { grid-template-columns: 1fr; gap: 10px; }
-  .demo-arrow { justify-content: center; transform: rotate(90deg); }
 }
 
 /* ------------------------------------------------------------ sections */
@@ -341,7 +341,7 @@ section { padding: 80px 24px; }
 @media (prefers-reduced-motion: reduce) {
   .track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; padding: 0 24px; }
   .marquee { mask-image: none; -webkit-mask-image: none; }
-  .who .dot { animation: none; }
+  .dot { animation: none; }
 }
 
 /* ------------------------------------------------------------- compare */
@@ -577,11 +577,6 @@ article.post h2 a:hover { color: var(--accent); }
     --faint: #7D736A;
     --bg: #1B1815;
     --card: #221E1A;
-  }
-  body.landing {
-    background:
-      radial-gradient(900px 520px at 50% -80px, #2A211B 0%, rgba(42, 33, 27, 0) 70%),
-      var(--bg);
   }
   .appstore, .pill { background: var(--accent); color: #1B1815; }
   .appstore[aria-disabled="true"], .pill[aria-disabled="true"] { background: var(--rule); color: var(--faint); }
