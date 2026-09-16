@@ -4,150 +4,309 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ragus — Just say what you ate</title>
-<meta name="description" content="A calorie tracker you talk to. Describe your meal in your own words and Ragus works out the numbers. No searching, no barcodes, no scale on the kitchen counter.">
+<meta name="description" content="A calorie tracker you talk to. Describe your meal in your own words and Ragus turns it into calories, macros and burn. No searching, no barcodes, no scale on the kitchen counter.">
 <meta property="og:title" content="Ragus — Just say what you ate">
 <meta property="og:description" content="A calorie tracker you talk to. Describe your meal in your own words and Ragus works out the numbers.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ragus.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="landing">
 
-<div class="wrap">
-  <nav class="nav">
-    <a class="brand" href="index.html">
-      <svg width="28" height="28" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-        <path d="M17 68 q-9 3 -10 13" stroke="#C4552F" stroke-width="7" stroke-linecap="round"/>
-        <path d="M83 68 q9 3 10 13" stroke="#C4552F" stroke-width="7" stroke-linecap="round"/>
-        <rect x="31" y="80" width="15" height="10" rx="5" fill="#9E4325"/>
-        <rect x="54" y="80" width="15" height="10" rx="5" fill="#9E4325"/>
-        <rect x="18" y="26" width="64" height="58" rx="17" fill="#C4552F"/>
-        <path d="M35 26 H65 A17 17 0 0 1 82 43 H18 A17 17 0 0 1 35 26 Z" fill="#D4744F"/>
-        <circle cx="40" cy="56" r="9" fill="#FBF8F4"/><circle cx="62" cy="56" r="9" fill="#FBF8F4"/>
-        <circle cx="42" cy="57" r="4.2" fill="#2B2724"/><circle cx="64" cy="57" r="4.2" fill="#2B2724"/>
-        <path d="M43 71 q8 7 16 0" stroke="#2B2724" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+<nav class="nav container">
+  <a class="brand" href="index.html">
+    <svg width="28" height="28" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+      <path d="M17 68 q-9 3 -10 13" stroke="#C4552F" stroke-width="7" stroke-linecap="round"/>
+      <path d="M83 68 q9 3 10 13" stroke="#C4552F" stroke-width="7" stroke-linecap="round"/>
+      <rect x="31" y="80" width="15" height="10" rx="5" fill="#9E4325"/>
+      <rect x="54" y="80" width="15" height="10" rx="5" fill="#9E4325"/>
+      <rect x="18" y="26" width="64" height="58" rx="17" fill="#C4552F"/>
+      <path d="M35 26 H65 A17 17 0 0 1 82 43 H18 A17 17 0 0 1 35 26 Z" fill="#D4744F"/>
+      <circle cx="40" cy="56" r="9" fill="#FBF8F4"/><circle cx="62" cy="56" r="9" fill="#FBF8F4"/>
+      <circle cx="42" cy="57" r="4.2" fill="#2B2724"/><circle cx="64" cy="57" r="4.2" fill="#2B2724"/>
+      <path d="M43 71 q8 7 16 0" stroke="#2B2724" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+    </svg>
+    Ragus
+  </a>
+  <div class="nav-links">
+    <a href="#how">How it works</a>
+    <a href="faq.html">FAQ</a>
+    <a href="blog/index.html">Blog</a>
+  </div>
+  <!-- Live link goes here once the app is approved: remove aria-disabled,
+       set href to the App Store URL and change the text to "Get the app". -->
+  <a class="pill" href="#" aria-disabled="true">Coming soon</a>
+</nav>
+
+<header class="hero container">
+  <h1>Don't search.<br><em>Just say it.</em></h1>
+  <p class="lede">The calorie tracker you talk to. Describe your meal in your own words
+    and Ragus turns it into calories, macros and burn &mdash; portions estimated,
+    exercise subtracted, nothing looked up in a list.</p>
+  <div class="cta">
+    <a class="appstore" href="#" aria-disabled="true">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M16.4 12.8c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.6.7 2.8.7c1.1 0 1.9-1 2.6-2.1.8-1.2 1.2-2.4 1.2-2.5-.1 0-2.2-.9-2.2-3.2zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.6-1.1 1.6-.9 2.6 1 .1 2-.5 2.6-1.2z"/>
       </svg>
-      Ragus
+      <span>
+        <span class="sub">Coming soon to the</span>
+        <span class="main">App Store</span>
+      </span>
     </a>
-    <div class="nav-links">
+    <p class="cta-note">iPhone &middot; iOS 15.1 and later &middot; Free</p>
+  </div>
+
+  <!-- The whole product in one card: what you say, what you get. -->
+  <div class="demo" aria-label="Example: what you say and what Ragus records">
+    <div class="demo-in">
+      <span class="who"><span class="dot"></span>You say</span>
+      <p>&ldquo;Two boiled eggs, toast with butter and a large coffee.
+        Then a 5k run this evening.&rdquo;</p>
+    </div>
+    <div class="demo-arrow" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </div>
+    <div class="demo-out">
+      <span class="who">Ragus records</span>
+      <ul>
+        <li><span>Boiled egg &times;2</span><b>140</b></li>
+        <li><span>Toast with butter</span><b>190</b></li>
+        <li><span>Large coffee</span><b>5</b></li>
+        <li class="burn"><span>5k run</span><b>&minus;310</b></li>
+      </ul>
+      <div class="net"><span>Net for the day</span><b>+25 kcal</b></div>
+    </div>
+  </div>
+  <p class="demo-note">One sentence. Four entries, portions estimated, the run given back.
+    You never opened a search box.</p>
+</header>
+
+<!-- Honest social proof: the food, not the logos. -->
+<section class="foods" aria-label="Foods Ragus understands">
+  <p class="eyebrow container">Works for what you actually eat</p>
+  <div class="marquee">
+    <div class="track">
+      <span>Jollof rice</span><span>Waakye</span><span>Goat meat pepper soup</span><span>A bottle of malt</span>
+      <span>Egusi and pounded yam</span><span>Shawarma</span><span>Suya</span><span>Fried plantain</span>
+      <span>Cheese sandwich</span><span>Oatmeal</span><span>Chicken biryani</span><span>Ramen</span>
+      <span>Moi moi</span><span>Two eggs and toast</span><span>Large bowl of pasta</span><span>Puff puff</span>
+      <span>Jollof rice</span><span>Waakye</span><span>Goat meat pepper soup</span><span>A bottle of malt</span>
+      <span>Egusi and pounded yam</span><span>Shawarma</span><span>Suya</span><span>Fried plantain</span>
+      <span>Cheese sandwich</span><span>Oatmeal</span><span>Chicken biryani</span><span>Ramen</span>
+      <span>Moi moi</span><span>Two eggs and toast</span><span>Large bowl of pasta</span><span>Puff puff</span>
+    </div>
+  </div>
+</section>
+
+<section class="compare container">
+  <h2 class="display">Six taps a meal,<br>or <em>one sentence.</em></h2>
+  <p class="lede center">Most trackers make you do the data entry. Ragus does it for you.</p>
+  <div class="compare-grid">
+    <div class="card dull">
+      <span class="who">A typical tracker</span>
+      <ol>
+        <li>Search &ldquo;egg&rdquo;</li>
+        <li>Scroll past 40 brands</li>
+        <li>Pick a serving size</li>
+        <li>Type a quantity</li>
+        <li>Add to breakfast</li>
+        <li>Repeat for the toast, the butter, the coffee&hellip;</li>
+      </ol>
+    </div>
+    <div class="card bright">
+      <span class="who">Ragus</span>
+      <ol>
+        <li>Say &ldquo;two eggs, toast with butter, and a coffee.&rdquo;</li>
+      </ol>
+      <p class="fine">Whole meals at once. Yesterday's dinner if you forgot &mdash; just say when.</p>
+    </div>
+  </div>
+</section>
+
+<section class="how container" id="how">
+  <h2 class="display">How it <em>works</em></h2>
+  <div class="steps">
+    <div class="step">
+      <span class="n">1</span>
+      <h3>Speak naturally</h3>
+      <p>Tap the microphone and talk, or type if you'd rather. &ldquo;A bowl of rice&rdquo;
+        is a perfectly good input &mdash; you don't need to know the grams.</p>
+    </div>
+    <div class="step">
+      <span class="n">2</span>
+      <h3>Sugar works it out</h3>
+      <p>Your words become food, portions, calories and macros &mdash; and the
+        exercise in the same sentence gives part of the day back.</p>
+    </div>
+    <div class="step">
+      <span class="n">3</span>
+      <h3>See where you are</h3>
+      <p>One number for today, and a trend showing where the last few weeks
+        are actually taking you.</p>
+    </div>
+  </div>
+</section>
+
+<section class="feature container">
+  <div class="feature-text">
+    <p class="eyebrow">Every estimate, explained</p>
+    <h2>It shows <em>its work.</em></h2>
+    <p>Each entry carries the assumption behind it: how many eggs, what size,
+      how long the session, at what effort. If it guessed a medium portion and
+      you had a large one, you can see that &mdash; and fix it by describing it again.</p>
+    <p>When it isn't confident, it says so, rather than presenting a made-up
+      number as fact.</p>
+  </div>
+  <figure class="phone"><img src="img/detail.png" alt="A day's log in Ragus, each item with the assumption behind its calorie estimate" loading="lazy"></figure>
+</section>
+
+<section class="feature flip container">
+  <div class="feature-text">
+    <p class="eyebrow">Today</p>
+    <h2>Your whole day, <em>one number.</em></h2>
+    <p>Eaten, burned, and what's left against a target built from your body and
+      your goal &mdash; with the calculation laid out on the You tab, not hidden.</p>
+    <p>Protein, carbs and fat sit underneath. Connect Apple Health and walking
+      counts towards your day without you logging a step.</p>
+  </div>
+  <figure class="phone"><img src="img/today.png" alt="The Today screen: a calorie gauge, macros against target, and the day's entries" loading="lazy"></figure>
+</section>
+
+<section class="feature container">
+  <div class="feature-text">
+    <p class="eyebrow">Trends</p>
+    <h2>See the week, <em>not the meal.</em></h2>
+    <p>Daily averages across a week, a month, six months or a year, against your
+      target. A weight line drawn from what you've actually logged, not from a
+      formula's optimism.</p>
+    <p>Days you didn't log are left out of the average &mdash; missing data, not
+      a deficit.</p>
+  </div>
+  <figure class="phone"><img src="img/trends.png" alt="The Trends screen: a week of daily calories as bars against a target line" loading="lazy"></figure>
+</section>
+
+<section class="feature flip container">
+  <div class="feature-text">
+    <p class="eyebrow">Food that isn't in the database</p>
+    <h2>Built for <em>your</em> kitchen.</h2>
+    <p>Most trackers were built around a Western supermarket. Search for waakye,
+      goat meat or a bottle of malt and you get nothing usable &mdash; or three
+      wrong answers and no way to tell which is which.</p>
+    <p>Ragus doesn't look things up in a fixed list. It works out what you
+      described, and remembers it, so the next person who says the same thing
+      gets the answer instantly.</p>
+  </div>
+  <figure class="phone"><img src="img/log.png" alt="The Log screen: a microphone button and example phrases like 'Large bowl of jollof rice'" loading="lazy"></figure>
+</section>
+
+<section class="sugar container">
+  <svg class="sugar-face" width="72" height="72" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+    <path d="M17 68 q-9 3 -10 13" stroke="#C4552F" stroke-width="7" stroke-linecap="round"/>
+    <path d="M83 68 q9 3 10 13" stroke="#C4552F" stroke-width="7" stroke-linecap="round"/>
+    <rect x="31" y="80" width="15" height="10" rx="5" fill="#9E4325"/>
+    <rect x="54" y="80" width="15" height="10" rx="5" fill="#9E4325"/>
+    <rect x="18" y="26" width="64" height="58" rx="17" fill="#C4552F"/>
+    <path d="M35 26 H65 A17 17 0 0 1 82 43 H18 A17 17 0 0 1 35 26 Z" fill="#D4744F"/>
+    <circle cx="40" cy="56" r="9" fill="#FBF8F4"/><circle cx="62" cy="56" r="9" fill="#FBF8F4"/>
+    <circle cx="42" cy="57" r="4.2" fill="#2B2724"/><circle cx="64" cy="57" r="4.2" fill="#2B2724"/>
+    <path d="M43 71 q8 7 16 0" stroke="#2B2724" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+  </svg>
+  <blockquote>&ldquo;Miss it by a hundred and nothing breaks.
+    Miss it by five hundred and I'll mention it.&rdquo;</blockquote>
+  <p class="attrib">&mdash; Sugar, who lives in the app</p>
+  <p class="fine">Nobody weighs their dinner every day, and a tracker that pretends otherwise
+    gets abandoned in a week. Close and sustained beats precise and quit.</p>
+</section>
+
+<section class="privacy container">
+  <h2 class="display">Your food <em>stays yours.</em></h2>
+  <p class="lede center">The only thing that leaves your phone is the text of what you logged,
+    which is turned into numbers and stored on your account. That's it.</p>
+  <div class="badges">
+    <div class="badge"><b>No ads</b><span>Nothing to sell you, nothing to sell you to.</span></div>
+    <div class="badge"><b>No analytics</b><span>No tracking software of any kind in the app.</span></div>
+    <div class="badge"><b>No recordings</b><span>Speech becomes text on your iPhone. We never receive audio.</span></div>
+    <div class="badge"><b>Delete in one tap</b><span>Your account and everything in it, from inside the app.</span></div>
+  </div>
+  <p class="fine center">The full detail is in the <a href="https://api.ragus.io/privacy">privacy policy</a>.</p>
+</section>
+
+<section class="faq-short container">
+  <h2 class="display">Questions</h2>
+  <div class="faq">
+    <details open>
+      <summary>How accurate can it possibly be?</summary>
+      <p>Accurate enough to be useful, and honest about the rest. Ragus estimates portions
+        from your description &mdash; which is what a dietitian does when you describe a meal,
+        and considerably better than the alternative, which for most people is not logging
+        at all. Every entry shows what was assumed.</p>
+    </details>
+    <details>
+      <summary>Do I need to weigh my food?</summary>
+      <p>No. You can &mdash; say &ldquo;180 grams of rice&rdquo; and it uses that. But the
+        whole design assumes you won't.</p>
+    </details>
+    <details>
+      <summary>Does it handle exercise?</summary>
+      <p>In the same sentence as the food. &ldquo;A chicken wrap and then a 5k run&rdquo;
+        records both, and the run counts against your total rather than sitting in a
+        separate screen you never open.</p>
+    </details>
+    <details>
+      <summary>Is my voice recorded?</summary>
+      <p>Your speech is turned into text by Apple's speech recognition built into iOS.
+        Ragus only ever receives the text, and never stores or sends a recording.</p>
+    </details>
+    <details>
+      <summary>Which phones does it run on?</summary>
+      <p>iPhone, iOS 15.1 and later. Android isn't available yet.</p>
+    </details>
+  </div>
+  <p class="fine center"><a href="faq.html">All the questions &rarr;</a></p>
+</section>
+
+<section class="final container">
+  <h2 class="display">Just say <em>what you ate.</em></h2>
+  <div class="cta center">
+    <a class="appstore" href="#" aria-disabled="true">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M16.4 12.8c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.6.7 2.8.7c1.1 0 1.9-1 2.6-2.1.8-1.2 1.2-2.4 1.2-2.5-.1 0-2.2-.9-2.2-3.2zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.6-1.1 1.6-.9 2.6 1 .1 2-.5 2.6-1.2z"/>
+      </svg>
+      <span>
+        <span class="sub">Coming soon to the</span>
+        <span class="main">App Store</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<footer class="container">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="brand">Ragus</span>
+      <p>Made for people who won't weigh their dinner.</p>
+    </div>
+    <div>
+      <h4>Product</h4>
+      <a href="#how">How it works</a>
       <a href="faq.html">FAQ</a>
       <a href="blog/index.html">Blog</a>
     </div>
-  </nav>
-
-  <header class="hero">
-    <h1>Just say<br>what you ate.</h1>
-    <p class="lede">No searching. No barcodes. No scale on the kitchen counter.
-      Describe your meal the way you'd describe it to a friend, and Ragus works out the rest.</p>
-
-    <div class="cta">
-      <!-- Live link goes here once the app is approved. Remove aria-disabled
-           and set href to the App Store URL. -->
-      <a class="appstore" href="#" aria-disabled="true">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M16.4 12.8c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.6.7 2.8.7c1.1 0 1.9-1 2.6-2.1.8-1.2 1.2-2.4 1.2-2.5-.1 0-2.2-.9-2.2-3.2zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.6-1.1 1.6-.9 2.6 1 .1 2-.5 2.6-1.2z"/>
-        </svg>
-        <span>
-          <span class="sub">Coming soon to the</span>
-          <span class="main">App Store</span>
-        </span>
-      </a>
-      <p class="cta-note">iPhone &middot; iOS 15.1 and later</p>
-    </div>
-  </header>
-
-  <section>
-    <h2>What it looks like</h2>
-    <p class="said">
-      <span class="who">You say</span>
-      “Two boiled eggs, toast with butter, and a large coffee. Then a 5k run.”
-    </p>
-    <ul class="result">
-      <li>Boiled egg &times;2 <b>140 kcal</b></li>
-      <li>Toast with butter <b>190 kcal</b></li>
-      <li>Coffee <b>5 kcal</b></li>
-      <li>5k run <b>&minus;310 kcal</b></li>
-    </ul>
-    <p style="margin-top:20px;color:var(--muted);font-size:16px">
-      One sentence. Four entries, portions estimated, exercise subtracted.
-      You never opened a search box.</p>
-  </section>
-
-  <section>
-    <h2>How it works</h2>
-    <div class="steps">
-      <div class="step">
-        <span class="n">1</span>
-        <h3>Say it</h3>
-        <p>Tap the microphone and talk, or type if you'd rather. Whole meals at
-          once. Yesterday's dinner if you forgot.</p>
-      </div>
-      <div class="step">
-        <span class="n">2</span>
-        <h3>Sugar works it out</h3>
-        <p>Your words become food, portions and calories &mdash; including the
-          exercise, which gives the day back.</p>
-      </div>
-      <div class="step">
-        <span class="n">3</span>
-        <h3>See where you are</h3>
-        <p>One number for today, and a line showing where the last few weeks
-          are actually taking you.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Food that isn't in the database</h2>
-    <p class="big">Most trackers were built around a Western supermarket.</p>
-    <p style="color:var(--muted)">Search for waakye, goat meat or a bottle of malt in a
-      typical calorie app and you get nothing usable &mdash; or three wrong answers and no way
-      to tell which is which. Ragus doesn't look things up in a fixed list. It works out what
-      you described, and remembers it, so the next person who says the same thing gets the
-      answer instantly.</p>
-    <p style="color:var(--muted)">If it isn't sure, it says so rather than inventing
-      a confident number.</p>
-  </section>
-
-  <section>
-    <h2>Honest about estimates</h2>
-    <p class="said">
-      <span class="who">Sugar</span>
-      “Miss it by a hundred and nothing breaks. Miss it by five hundred and I'll mention it.”
-    </p>
-    <p style="color:var(--muted);margin-top:18px">Nobody weighs their dinner every day,
-      and a tracker that pretends otherwise gets abandoned in a week. Ragus estimates
-      portions, shows you what it assumed, and lets you correct it. Close and sustained
-      beats precise and quit.</p>
-  </section>
-
-  <section>
-    <h2>Get it</h2>
-    <div class="cta">
-      <a class="appstore" href="#" aria-disabled="true">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M16.4 12.8c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.5 0-2.8.8-3.6 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.6 2.2 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.6.7 2.8.7c1.1 0 1.9-1 2.6-2.1.8-1.2 1.2-2.4 1.2-2.5-.1 0-2.2-.9-2.2-3.2zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.6-1.1 1.6-.9 2.6 1 .1 2-.5 2.6-1.2z"/>
-        </svg>
-        <span>
-          <span class="sub">Coming soon to the</span>
-          <span class="main">App Store</span>
-        </span>
-      </a>
-      <p class="cta-note">Questions first? <a href="faq.html">Read the FAQ</a>.</p>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-links">
-      <a href="faq.html">FAQ</a>
-      <a href="blog/index.html">Blog</a>
+    <div>
+      <h4>Legal</h4>
       <a href="https://api.ragus.io/privacy">Privacy</a>
       <a href="https://api.ragus.io/support">Support</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
       <a href="mailto:dev@ragus.io">dev@ragus.io</a>
     </div>
-    <p>&copy; 2026 Ragus. Made for people who won't weigh their dinner.</p>
-  </footer>
-</div>
+  </div>
+  <p class="copyright">&copy; 2026 Ragus.</p>
+</footer>
 
 </body>
 </html>

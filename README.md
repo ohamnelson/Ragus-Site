@@ -20,13 +20,32 @@ python3 -m http.server 4321
 ## Layout
 
 ```
-index.html      home
+index.html      home -- wide, centred sections with product shots
 faq.html        questions
 styles.css      the whole design; palette matches the app
+img/            phone screens, cropped from the App Store compositions
 blog/
   index.html    post list
   *.html        one file per post
 ```
+
+The home page is laid out like a modern product landing page: hero with one
+italic accent phrase, a "you say / Ragus records" demo card, a comparison,
+three how-it-works cards, alternating feature rows with a phone frame, a
+privacy block, a short FAQ and a final call to action. There is deliberately
+no invented social proof -- no logos, quotes or statistics -- until there are
+real ones to show.
+
+## Screens in `img/`
+
+Each is the phone screen alone, cropped out of the 1290x2796 App Store
+compositions (the frame and caption are drawn by the site, not the image):
+
+```bash
+sips --cropOffset 475 160 -c 2245 970 in.png --out img/name.png && sips -Z 1300 img/name.png
+```
+
+Redo them when the app's screens change.
 
 ## Adding a blog post
 
@@ -40,9 +59,17 @@ saves.
 The App Store button is **inert on purpose** while the app is TestFlight-only.
 It renders greyed as "Coming soon to the App Store".
 
-When the app is approved, search for `aria-disabled="true"` (three places:
-twice in `index.html`, once in `faq.html`), remove that attribute, and set
-`href` to the App Store URL.
+When the app is approved, search for `aria-disabled="true"` (four places:
+three in `index.html` -- the nav pill and two App Store buttons -- and one in
+`faq.html`), remove that attribute, set `href` to the App Store URL, and change
+the nav pill's text to "Get the app".
+
+## Deploying
+
+The site is a Cloudflare Worker with static assets (`ragus-site`), serving
+`ragus.io` and `www.ragus.io`. Redeploy from the dashboard: Workers & Pages ->
+ragus-site -> New deployment -> upload this folder (everything except `.git`
+and `README.md`).
 
 ## Design
 
