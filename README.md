@@ -67,9 +67,13 @@ the nav pill's text to "Get the app".
 ## Deploying
 
 The site is a Cloudflare Worker with static assets (`ragus-site`), serving
-`ragus.io` and `www.ragus.io`. Redeploy from the dashboard: Workers & Pages ->
-ragus-site -> New deployment -> upload this folder (everything except `.git`
-and `README.md`).
+`ragus.io` and `www.ragus.io`. It builds on push: commit to `main`, push to
+GitHub, and the new version is live within about a minute.
+
+The host serves clean URLs and redirects the `.html` forms (`/faq.html` ->
+`/faq`, `/blog/index.html` -> `/blog/`), so links between pages use the clean
+form. `og.png` is the link-preview card (1200x630); rebuild it if the headline
+changes. `favicon.png` and `apple-touch-icon.png` are the app icon resized.
 
 ## Design
 
