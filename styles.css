@@ -191,22 +191,6 @@ p:last-child { margin-bottom: 0; }
 
 .hero h1 { font-size: clamp(40px, 5.6vw, 64px); line-height: 1.06; }
 
-/* The line above the headline, where the reference has a rating. Ragus has
-   no ratings yet, so it says what the product is instead of how loved it is. */
-.proof {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  border: 2px solid var(--rule);
-  background: var(--card);
-  border-radius: 999px;
-  padding: 7px 14px 7px 12px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--muted);
-  margin-bottom: 22px;
-}
-
 .hero-phones {
   position: relative;
   height: 560px;
