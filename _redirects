@@ -1,7 +1,6 @@
-# One host. www is a duplicate of the apex to a search engine.
-https://www.ragus.io/* https://ragus.io/:splat 301
-
-# The old API-hosted addresses, for anyone who saved them.
+# The .html forms of the pages, for anyone who saved them. (Sending www to
+# the apex is a hostname redirect, which this file cannot express -- that
+# one is a Redirect Rule in the Cloudflare dashboard.)
 /privacy.html /privacy 301
 /support.html /support 301
 /faq.html /faq 301
