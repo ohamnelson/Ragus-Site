@@ -22,6 +22,8 @@ python3 -m http.server 4321
 ```
 index.html      home -- wide, centred sections with product shots
 faq.html        questions
+privacy.html    the privacy policy App Store Connect points at
+support.html    the support page App Store Connect points at
 styles.css      the whole design; palette matches the app
 img/            phone screens, cropped from the App Store compositions
 blog/
