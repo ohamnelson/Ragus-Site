@@ -1,0 +1,7 @@
+# One host. www is a duplicate of the apex to a search engine.
+https://www.ragus.io/* https://ragus.io/:splat 301
+
+# The old API-hosted addresses, for anyone who saved them.
+/privacy.html /privacy 301
+/support.html /support 301
+/faq.html /faq 301

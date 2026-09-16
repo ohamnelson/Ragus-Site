@@ -66,6 +66,18 @@ three in `index.html` -- the nav pill and two App Store buttons -- and one in
 `faq.html`), remove that attribute, set `href` to the App Store URL, and change
 the nav pill's text to "Get the app".
 
+## Search
+
+Every page carries a canonical URL, Open Graph tags and JSON-LD: the home
+page as a `MobileApplication`, the FAQ as a `FAQPage` (built from the
+`<details>` blocks, so keep questions in that form), each post as a
+`BlogPosting`. `sitemap.xml` lists the pages by hand -- add a line when you
+add a post. `robots.txt` points at it. `_redirects` sends `www` to the apex
+so there is one host, and `_headers` sets cache lifetimes for the images.
+
+The home title leads with "voice calorie tracker" on purpose: it is the
+phrase people search, and the app's name is not yet one.
+
 ## Deploying
 
 The site is a Cloudflare Worker with static assets (`ragus-site`), serving
