@@ -55,7 +55,7 @@
 
   <header class="hero" style="padding-bottom:34px">
     <h1>Privacy Policy</h1>
-    <p class="lede">What Ragus keeps, where it goes, and how to delete all of it.</p><p class="dated">Last updated 13 September 2026</p>
+    <p class="lede">What Ragus keeps, where it goes, and how to delete all of it.</p><p class="dated">Last updated 22 September 2026</p>
   </header>
 
   <section class="legal" style="border-top:none;padding-top:8px">
@@ -95,16 +95,21 @@
   account.</p>
 
   <h2>Voice</h2>
-  <p>If you log by speaking, your speech is transcribed by <strong>Apple's speech recognition</strong>
-  built into iOS, which may process the audio on Apple's servers. That is governed by
-  Apple's privacy policy, not this one. Ragus receives only the resulting text; we never
-  store or transmit audio recordings.</p>
+  <p>If you log by speaking, the phone records what you say while you hold the microphone
+  open, and when you stop the clip is sent to our server and on to a speech-to-text
+  provider (currently <strong>Deepgram</strong>) to be turned into text. The clip is used
+  for that one purpose, is not stored by Ragus, and is deleted by the provider once
+  transcribed. While you speak, Apple's built-in speech recognition also runs on the
+  phone; its version of the text is sent alongside the clip so we can check the quality
+  of the transcription, and is not shown to you or kept.</p>
 
   <h2>Who else sees your data</h2>
   <ul>
     <li><strong>Anthropic.</strong> The text of what you logged is sent to the Claude API to be
       turned into structured nutrition data. It is sent for that purpose alone. Your name,
       email and account identifier are not included.</li>
+    <li><strong>Deepgram.</strong> Turns a voice clip into text when you log by speaking. It
+      receives the audio and nothing else about you.</li>
     <li><strong>Supabase.</strong> Provides the authentication and the database where your
       account and logs are stored.</li>
     <li><strong>FastAPI Cloud.</strong> Runs the server the app talks to.</li>
