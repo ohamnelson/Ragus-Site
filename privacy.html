@@ -97,7 +97,7 @@
   <h2>Voice</h2>
   <p>If you log by speaking, the phone records what you say while you hold the microphone
   open, and when you stop the clip is sent to our server and on to a speech-to-text
-  provider (currently <strong>Deepgram</strong>) to be turned into text. The clip is used
+  provider (currently <strong>ElevenLabs</strong>) to be turned into text. The clip is used
   for that one purpose, is not stored by Ragus, and is deleted by the provider once
   transcribed. While you speak, Apple's built-in speech recognition also runs on the
   phone; its version of the text is sent alongside the clip so we can check the quality
@@ -108,7 +108,7 @@
     <li><strong>Anthropic.</strong> The text of what you logged is sent to the Claude API to be
       turned into structured nutrition data. It is sent for that purpose alone. Your name,
       email and account identifier are not included.</li>
-    <li><strong>Deepgram.</strong> Turns a voice clip into text when you log by speaking. It
+    <li><strong>ElevenLabs.</strong> Turns a voice clip into text when you log by speaking. It
       receives the audio and nothing else about you.</li>
     <li><strong>Supabase.</strong> Provides the authentication and the database where your
       account and logs are stored.</li>
