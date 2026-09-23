@@ -4,3 +4,9 @@
 /privacy.html /privacy 301
 /support.html /support 301
 /faq.html /faq 301
+
+# Unsubscribe pages live on the API, not here, but the emails that carry the
+# link were sent with PUBLIC_BASE_URL pointing at the apex. Those links are
+# in people's inboxes and cannot be edited, so this forwards them. Query
+# string is preserved by Cloudflare, which matters: the token is in it.
+/email/* https://api.ragus.io/email/:splat 302
